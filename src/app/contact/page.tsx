@@ -5,7 +5,7 @@ import styles from "./contact.module.css";
 import SiteFooter from "../components/SiteFooter";
 import Navbar from "../components/Navbar";
 
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/xdaqbjna";
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/meeybjzl";
 
 export default function ContactPage() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
