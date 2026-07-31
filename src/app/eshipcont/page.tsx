@@ -99,7 +99,7 @@ export default function AdminLogin() {
     <div className={styles.loginContainer}>
       <div className={styles.loginCard}>
         <img src="/newlog.png" alt="OptimuxExpress" style={{ height: "60px", marginBottom: "1rem", objectFit: "contain" }} />
-        
+
         {view === "login" && (
           <>
             <h2>Admin Portal</h2>
@@ -140,7 +140,7 @@ export default function AdminLogin() {
               </button>
             </form>
             <p style={{ marginTop: "1.5rem", color: "#aaa", fontSize: "0.8rem" }}>
-              Default: admin@expreshipdeliv.com  / Admin@1234
+              Default: contact@optimuxexpress.com  / Admin@1234
             </p>
           </>
         )}

@@ -34,7 +34,7 @@ export default function SiteFooter() {
         </div>
         <div className={styles.footerRight}>
           <div className={styles.footerContact}>
-            <span>contact@expreshipdeliv.com </span>
+            <span>contact@optimuxexpress.com </span>
           </div>
           <p><strong>Canada</strong></p>
         </div>

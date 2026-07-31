@@ -153,7 +153,7 @@ export default function ContactPage() {
             <div className={styles.infoCard}>
               <div className={styles.infoIcon}>✉️</div>
               <h4>Email Us</h4>
-              <p>contact@expreshipdeliv.com</p>
+              <p>contact@optimuxexpress.com</p>
             </div>
             <div className={styles.infoCard}>
               <div className={styles.infoIcon}>📍</div>

@@ -97,7 +97,7 @@ export default function Home() {
               SERVICES<span className={styles.heroNewCursor}></span>
             </h1>
             <p className={styles.heroNewText}>
-              Logistic service provider company plays a pivotal role in the global supply chain ecosystem managing.
+              Our Logistic service provider company plays a pivotal role in the global supply chain ecosystem managing.
             </p>
             <div className={styles.heroNewBottomRow}>
               <button className={styles.heroNewBtn} onClick={() => router.push("/contact")}>
