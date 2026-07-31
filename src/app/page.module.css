@@ -63,8 +63,8 @@
   overflow: hidden;
   display: flex;
   align-items: center;
-  padding-top: 60px;
-  /* offset for navbar */
+  padding-top: 100px;
+  /* offset for navbar + breathing room */
 }
 
 .heroNewBg {

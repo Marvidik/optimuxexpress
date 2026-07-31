@@ -93,7 +93,7 @@ export default function Home() {
           <div className={styles.heroNewLeft}>
             <p className={styles.heroNewTagline}>SPECIALIST IN MODERN TRANSPORTATION</p>
             <h1 className={styles.heroNewTitle}>
-              MODERN LOGISTIC<br />
+              OptimuxExpress LOGISTIC<br />
               SERVICES<span className={styles.heroNewCursor}></span>
             </h1>
             <p className={styles.heroNewText}>
