@@ -1,0 +1,913 @@
+/* ===========================
+   TRACK PAGE — Tanspot Hero Style
+   =========================== */
+.container {
+  min-height: 100vh;
+  background: #f8f9fb;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── HERO ── */
+.trackHero {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  background-color: #112c34;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding-top: 90px;
+}
+
+.trackHeroBg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.trackHeroOrange {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #f75d34;
+  clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.trackHeroDark {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 30%;
+  height: 45%;
+  background: #112c34;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  z-index: 2;
+}
+
+.trackHeroInner {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4rem 5% 5rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.trackHeroLeft {
+  flex: 1;
+}
+
+.trackHeroTagline {
+  color: #f75d34;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+
+.trackHeroTitle {
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.05;
+  margin-bottom: 1rem;
+}
+
+.trackHeroTitle span {
+  color: #f75d34;
+}
+
+.trackHeroSub {
+  color: #aeb6b9;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+/* Search Bar inside hero */
+.trackHeroSearch {
+  display: flex;
+  gap: 0;
+  margin-top: 2.5rem;
+  max-width: 580px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 50px;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+}
+
+.trackHeroInput {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-size: 0.95rem;
+  padding: 1rem 1.5rem;
+}
+
+.trackHeroInput::placeholder {
+  color: rgba(255,255,255,0.45);
+}
+
+.trackHeroBtn {
+  background: #f75d34;
+  color: #ffffff;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.trackHeroBtn:hover { background: #e04b23; }
+.trackHeroBtn:disabled { opacity: 0.7; cursor: not-allowed; }
+
+.heroRight {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  width: 45%;
+}
+
+.heroTruckWrapper {
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+}
+
+.heroTruck {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* ── MAIN BODY ── */
+.trackSection {
+  flex: 1;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 3rem 5% 6rem;
+}
+
+.errorMsg {
+  background: #fff3f3;
+  border: 1px solid #f5b8b8;
+  color: #c62828;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+}
+
+/* ── EMPTY STATE ── */
+.emptyState {
+  text-align: center;
+  padding: 5rem 2rem;
+  color: #888;
+}
+
+.emptyIcon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.emptyState h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.emptyState p {
+  font-size: 0.95rem;
+  color: #888;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+.spin { animation: spin 1s linear infinite; display: inline-block; }
+
+/* ── RESULT AREA ── */
+.resultWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Status Banner */
+.statusBanner {
+  background: #112c34;
+  border: 1px solid #112c34;
+  border-radius: 16px;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  flex-wrap: wrap;
+}
+
+.statusLeft {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.statusPill {
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.statusPillMoving {
+  background: #f75d34;
+  color: #ffffff;
+}
+
+.statusPillStationary {
+  background: #ef4444;
+  color: #ffffff;
+}
+
+.statusLabel {
+  font-size: 0.78rem;
+  color: #aeb6b9;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.25rem;
+}
+
+.statusMsg {
+  font-size: 0.95rem;
+  color: #ffffff;
+  max-width: 340px;
+}
+
+.statusRight {
+  text-align: right;
+}
+
+.statusDate {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Pay Button */
+.payBtn {
+  background: #f75d34;
+  color: #ffffff;
+  border: none;
+  padding: 0.85rem 2rem;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  align-self: center;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 6px 20px rgba(247, 93, 52, 0.35);
+}
+.payBtn:hover {
+  background: #e04b23;
+  transform: translateY(-2px);
+}
+
+/* Wallet Modal Overlay */
+.walletOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  backdrop-filter: blur(4px);
+}
+
+.walletModal {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 560px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: modalIn 0.25s ease;
+}
+
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.94) translateY(20px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.walletModalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.walletModalHeader h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #112c34;
+}
+
+.walletModalClose {
+  background: #f8f9fb;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #555;
+  transition: background 0.2s;
+}
+
+.walletModalClose:hover { background: #e8eaed; }
+
+.walletModalSub {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.walletList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.walletItem {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  background: #f8f9fb;
+  border: 1px solid #e8eaed;
+  border-radius: 16px;
+  padding: 1.2rem 1.5rem;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, transform 0.15s;
+}
+
+.walletItem:hover {
+  background: #fff5f2;
+  border-color: #f75d34;
+  transform: translateY(-2px);
+}
+
+.walletItemCoin {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: contain;
+  flex-shrink: 0;
+  background: #fff;
+  padding: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.walletItemInfo {
+  flex: 1;
+}
+
+.walletItemCoinName {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #112c34;
+}
+
+.walletItemNetwork {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 0.1rem;
+}
+
+.walletItemAddress {
+  font-size: 0.82rem;
+  color: #555;
+  font-family: monospace;
+  word-break: break-all;
+  margin-top: 0.4rem;
+  background: #fff;
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #e8eaed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.copyBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #f75d34;
+  font-size: 0.8rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  padding: 0;
+  transition: color 0.2s;
+}
+.copyBtn:hover { color: #e04b23; }
+
+/* Route Tickers */
+.routeTickers {
+  background: #ffffff;
+  border: 1px solid #e8eaed;
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  flex-wrap: wrap;
+}
+
+.tickerOrigin,
+.tickerDest {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+
+.tickerDot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.tickerLabel {
+  font-size: 0.75rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.2rem;
+}
+
+.tickerValue {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #112c34;
+}
+
+.tickerArrow {
+  font-size: 1.5rem;
+  color: #f75d34;
+  flex-shrink: 0;
+}
+
+/* Map Card */
+.mapCard {
+  height: 400px;
+  overflow: hidden;
+  border-radius: 16px !important;
+  padding: 0 !important;
+}
+
+/* Info Card Base */
+.infoCard {
+  background: #ffffff;
+  border: 1px solid #e8eaed;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.cardHeaderRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.cardTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #112c34;
+}
+
+.imageCount {
+  font-size: 0.8rem;
+  color: #888;
+  background: #f0f4f8;
+  padding: 0.3rem 0.7rem;
+  border-radius: 50px;
+}
+
+.compactAlbumButton {
+  background: #f75d34;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.compactAlbumButton:hover { background: #e04b23; }
+
+/* Progress Bar */
+.progressSection {
+  background: #ffffff;
+  border: 1px solid #e8eaed;
+  border-radius: 16px;
+  padding: 2rem 2rem 3rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.progressBar {
+  position: relative;
+  height: 4px;
+  background: #e8eaed;
+  border-radius: 4px;
+  margin: 2.5rem 0 3rem;
+}
+
+.progressFill {
+  position: absolute;
+  height: 100%;
+  background: #f75d34;
+  border-radius: 4px;
+  transition: width 0.6s ease;
+}
+
+.progressNode {
+  position: absolute;
+  transform: translateX(-50%);
+  top: -16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.progressDot {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #e8eaed;
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 0 2px #e8eaed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.progressNodeDone .progressDot {
+  background: #f75d34;
+  box-shadow: 0 0 0 2px #f75d34;
+}
+
+.progressNodeActive .progressDot {
+  background: #112c34;
+  box-shadow: 0 0 0 2px #112c34;
+}
+
+.progressLabel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.15rem;
+  width: 90px;
+}
+
+.progressLabel strong {
+  font-size: 0.72rem;
+  color: #333;
+  line-height: 1.3;
+}
+
+.progressLabel span {
+  font-size: 0.68rem;
+  color: #888;
+}
+
+.progressDate {
+  font-size: 0.65rem;
+  color: #aaa;
+}
+
+/* Timeline + Details Grid */
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.timelineCard {
+  background: #ffffff;
+  border: 1px solid #e8eaed;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.movementBadge {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  margin-bottom: 1.5rem;
+}
+
+.movementBadgeMoving {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.movementBadgeStationary {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.tStep {
+  display: flex;
+  gap: 1rem;
+  position: relative;
+}
+
+.tDotWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.tDot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #e8eaed;
+  border: 2px solid #e8eaed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.tStepDone .tDot {
+  background: #f75d34;
+  border-color: #f75d34;
+}
+
+.tStepActive .tDot {
+  background: #112c34;
+  border-color: #112c34;
+}
+
+.tLine {
+  width: 2px;
+  flex: 1;
+  background: #e8eaed;
+  min-height: 24px;
+  margin: 4px 0;
+}
+
+.tContent {
+  padding-bottom: 1.5rem;
+}
+
+.tStatus {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #112c34;
+  margin-bottom: 0.2rem;
+}
+
+.tLocation {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.tDate {
+  font-size: 0.75rem;
+  color: #999;
+  margin-top: 0.15rem;
+}
+
+/* Pulse animations */
+@keyframes pulseAnim {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.5; }
+}
+
+.activePulse,
+.activePulseSmall {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #f75d34;
+  display: inline-block;
+  animation: pulseAnim 1.2s ease-in-out infinite;
+}
+
+.activePulseStatic,
+.activePulseSmallStatic {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #888;
+  display: inline-block;
+}
+
+.detailsColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Info Rows */
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid #f0f2f5;
+  gap: 1rem;
+}
+
+.infoRow:last-child {
+  border-bottom: none;
+}
+
+.infoRow span {
+  font-size: 0.82rem;
+  color: #888;
+  flex-shrink: 0;
+}
+
+.infoRow strong {
+  font-size: 0.88rem;
+  color: #112c34;
+  font-weight: 600;
+  text-align: right;
+  word-break: break-word;
+}
+
+.shipGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 2rem;
+}
+
+/* Barcode */
+.barcodeCard {
+  background: #ffffff;
+  border: 1px solid #e8eaed;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.barcodeWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.barcodeStripes {
+  display: flex;
+  gap: 2px;
+  align-items: flex-end;
+  height: 70px;
+  margin-bottom: 0.5rem;
+}
+
+.barLine {
+  background: #112c34;
+  height: 100%;
+  border-radius: 1px;
+}
+
+.barcodeText {
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+.barcodeHint {
+  font-size: 0.8rem;
+  color: #999;
+  margin-top: 0.75rem;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .trackHeroInner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 3rem 5% 4rem;
+  }
+
+  .trackHeroBg {
+    width: 100%;
+    height: 40%;
+    top: auto;
+    bottom: 0;
+    clip-path: none;
+  }
+
+  .trackHeroOrange {
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .heroRight {
+    width: 100%;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .heroTruckWrapper {
+    max-width: 480px;
+  }
+
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .shipGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .statusBanner {
+    flex-direction: column;
+  }
+
+  .statusRight {
+    text-align: left;
+  }
+
+  .trackHeroSearch {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .progressSection {
+    overflow-x: auto;
+  }
+
+  .progressBar {
+    min-width: 600px;
+  }
+
+  .trackHeroTitle {
+    font-size: 2.5rem;
+  }
+}

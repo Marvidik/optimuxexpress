@@ -1,0 +1,270 @@
+/* ========================
+   CONTACT — Tanspot Style
+   ======================== */
+.container {
+  min-height: 100vh;
+  background: #f8f9fb;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 360px;
+  background-color: #112c34;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding-top: 90px;
+}
+
+.heroBg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.heroOrange {
+  position: absolute;
+  top: 0; right: 0;
+  width: 100%; height: 100%;
+  background: #f75d34;
+  clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.heroDark {
+  position: absolute;
+  bottom: 0; right: 0;
+  width: 30%; height: 45%;
+  background: #112c34;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  z-index: 2;
+}
+
+.heroInner {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4rem 5% 5rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.heroLeft { flex: 1; }
+
+.heroTagline {
+  color: #f75d34;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+
+.heroTitle {
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.05;
+  margin-bottom: 1rem;
+}
+
+.heroTitle span { color: #f75d34; }
+
+.heroSub {
+  color: #aeb6b9;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 480px;
+}
+
+.heroRight {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  width: 45%;
+}
+
+.heroTruckWrapper {
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+}
+
+.heroTruck {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* ── CONTACT SECTION ── */
+.contactSection {
+  flex: 1;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 5rem 5% 6rem;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* Form Card */
+.formCard {
+  background: #ffffff;
+  border: 1px solid #e8eaed;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+}
+
+.formCard h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #112c34;
+  margin-bottom: 2rem;
+}
+
+.form { display: flex; flex-direction: column; gap: 1.2rem; }
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.formGroup label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1.5px solid #e0e4ea;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: #112c34;
+  background: #fafbfc;
+  transition: border-color 0.2s;
+  outline: none;
+  box-sizing: border-box;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.input:focus {
+  border-color: #f75d34;
+}
+
+.submitBtn {
+  background: #f75d34;
+  color: #ffffff;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  margin-top: 0.5rem;
+  align-self: flex-start;
+}
+
+.submitBtn:hover { background: #e04b23; transform: translateY(-2px); }
+.submitBtn:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
+
+/* Info Column */
+.infoCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.infoCard {
+  background: #ffffff;
+  border: 1px solid #e8eaed;
+  border-radius: 16px;
+  padding: 1.8rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.infoIcon {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+.infoCard h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #112c34;
+  margin-bottom: 0.3rem;
+}
+
+.infoCard p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .heroInner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 3rem 5% 4rem;
+  }
+
+  .heroBg {
+    width: 100%;
+    height: 40%;
+    top: auto;
+    bottom: 0;
+  }
+
+  .heroOrange {
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .heroRight {
+    width: 100%;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .heroTruckWrapper {
+    max-width: 480px;
+  }
+
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+}
