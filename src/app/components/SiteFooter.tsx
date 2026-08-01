@@ -12,25 +12,23 @@ export default function SiteFooter() {
       <div className={styles.footerGrid}>
         <div className={styles.footerCol}>
           <h4>Company</h4>
-          <Link href="/">Product</Link>
-          <Link href="/">Why us?</Link>
-          <Link href="/about">About us</Link>
+          <Link href="/about">About Us</Link>
+          <Link href="/services">Services</Link>
+          <Link href="/contact">Contact</Link>
         </div>
         <div className={styles.footerCol}>
           <h4>Services</h4>
-          <Link href="#">Ship & Delivery</Link>
-          <Link href="#">Air Freight</Link>
-          <Link href="#">Local Distribution</Link>
-        </div>
-        <div className={styles.footerCol}>
-          <h4>Legal</h4>
-          <Link href="#">Terms of use</Link>
-          <Link href="#">Privacy policy</Link>
+          <Link href="/services#sea-shipping">Sea Shipping</Link>
+          <Link href="/services#air-freight">Air Freight</Link>
+          <Link href="/services#ground-logistics">Ground Logistics</Link>
+          <Link href="/services#warehousing">Warehousing</Link>
+          <Link href="/services#customs-clearance">Customs Clearance</Link>
+          <Link href="/services#express-delivery">Express Delivery</Link>
         </div>
         <div className={styles.footerCol}>
           <h4>Support</h4>
           <Link href="/contact">Contact us</Link>
-          <Link href="#">FAQ</Link>
+          <Link href="/contact">FAQ</Link>
         </div>
         <div className={styles.footerRight}>
           <div className={styles.footerContact}>
@@ -40,13 +38,7 @@ export default function SiteFooter() {
         </div>
       </div>
       <div className={styles.footerBottom}>
-        <p>English (United Kingdom) ⌄ &nbsp;&nbsp;&nbsp; © OptimuxExpress, LLC.</p>
-        <div className={styles.footerSocials}>
-          <a href="#">in</a>
-          <a href="#">f</a>
-          <a href="#">x</a>
-          <a href="#">ig</a>
-        </div>
+        <p>© OptimuxExpress, LLC.</p>
       </div>
     </footer>
   );

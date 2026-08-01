@@ -215,6 +215,106 @@
   margin: 0;
 }
 
+/* ── ABOUT SERVICES ── */
+.aboutServicesSection {
+  padding: 6rem 5%;
+  background: #f8f9fb;
+  text-align: center;
+}
+
+.aboutServicesTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #112c34;
+  margin-bottom: 1rem;
+}
+
+.aboutServicesTitle span { color: #f75d34; }
+
+.aboutServicesSub {
+  color: #666;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 4rem;
+  line-height: 1.6;
+}
+
+.aboutServicesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.aboutSvcCard {
+  background: #ffffff;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  text-align: left;
+  border: 1px solid #eef0f4;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutSvcCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(247, 93, 52, 0.1);
+  border-color: rgba(247, 93, 52, 0.3);
+}
+
+.aboutSvcIcon {
+  margin-bottom: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background: #fff0ec;
+  border-radius: 16px;
+}
+
+.aboutSvcCard h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #112c34;
+  margin-bottom: 1rem;
+}
+
+.aboutSvcCard p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.aboutSvcLearn {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #f75d34;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.aboutSvcViewAll {
+  display: inline-block;
+  background: #112c34;
+  color: #ffffff;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.aboutSvcViewAll:hover {
+  background: #1a424e;
+}
+
 /* ── VALUES ── */
 .valuesSection {
   background: #ffffff;
@@ -356,6 +456,9 @@
   .valuesGrid {
     grid-template-columns: 1fr 1fr;
   }
+  .aboutServicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 900px) {
@@ -399,7 +502,7 @@
     align-items: flex-start;
   }
 
-  .valuesGrid {
+  .valuesGrid, .aboutServicesGrid {
     grid-template-columns: 1fr;
   }
 }

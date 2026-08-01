@@ -169,6 +169,25 @@ export default function ContactPage() {
         </div>
       </section>
 
+      {/* ── FAQ ── */}
+      <section className={styles.faqSection}>
+        <div className={styles.faqHeader}>
+          <h2 className={styles.faqTitle}>Frequently Asked<br /><span>Questions</span></h2>
+        </div>
+        <div className={styles.faqContent}>
+          <div className={styles.faqLeft}>
+            <div className={styles.faqItem}><p className={styles.faqQuestion}>How can I track my shipment?</p><p className={styles.faqAnswer}>You can easily track your shipment by entering your tracking number in the track page or the home page.</p></div>
+            <div className={styles.faqItem}><p className={styles.faqQuestion}>What are your delivery hours?</p><p className={styles.faqAnswer}>We operate 24/7. Our emergency service ensures your packages are delivered at any time of the day.</p></div>
+            <div className={styles.faqItem}><p className={styles.faqQuestion}>Are there any hidden fees?</p><p className={styles.faqAnswer}>No, we pride ourselves on flat rate fees. What you see is what you pay.</p></div>
+          </div>
+          <div className={styles.faqRight}>
+            <div className={styles.faqItem}><p className={styles.faqQuestion}>Do you offer international shipping?</p><p className={styles.faqAnswer}>Yes, we deliver worldwide with reliable customs clearance processes to ensure smooth transit.</p></div>
+            <div className={styles.faqItem}><p className={styles.faqQuestion}>How do I file a claim for a lost package?</p><p className={styles.faqAnswer}>You can file a claim through this contact page by providing your tracking number and shipment details.</p></div>
+            <div className={styles.faqItem}><p className={styles.faqQuestion}>Can I change my delivery address?</p><p className={styles.faqAnswer}>Address changes can be requested before the package is out for delivery through customer support.</p></div>
+          </div>
+        </div>
+      </section>
+
       <SiteFooter />
     </div>
   );

@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import styles from "./navbar.module.css";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -25,6 +26,8 @@ export default function Navbar() {
         <img src="/newlog2.png" alt="OptimuxExpress" style={{ height: "60px", objectFit: "contain" }} />
       </Link>
 
+      <LanguageSwitcher />
+
       {/* Hamburger */}
       <div className={styles.hamburger} onClick={toggleMenu} aria-label="Menu">
         <div className={`${styles.bar} ${isOpen ? styles.bar1 : ""}`}></div>
@@ -35,6 +38,7 @@ export default function Navbar() {
       <div className={`${styles.navLinks} ${isOpen ? styles.active : ""}`}>
         <Link href="/" className={pathname === "/" ? styles.navActive : ""} onClick={() => setIsOpen(false)}>Home</Link>
         <Link href="/about" className={pathname === "/about" ? styles.navActive : ""} onClick={() => setIsOpen(false)}>About Us</Link>
+        <Link href="/services" className={pathname === "/services" ? styles.navActive : ""} onClick={() => setIsOpen(false)}>Services</Link>
         <Link href="/track" className={pathname === "/track" ? styles.navActive : ""} onClick={() => setIsOpen(false)}>Tracking</Link>
         <Link href="/contact" className={pathname === "/contact" ? styles.navActive : ""} onClick={() => setIsOpen(false)}>Contact</Link>
         <button

@@ -3,6 +3,17 @@ import Link from "next/link";
 import SiteFooter from "../components/SiteFooter";
 import Navbar from "../components/Navbar";
 
+import { Ship, Plane, Truck, Warehouse, ClipboardCheck, Zap, FastForward, ShieldCheck, Globe2, Handshake } from "lucide-react";
+
+const aboutServices = [
+  { icon: <Ship size={32} color="#f75d34" />, title: "Sea Shipping", desc: "Full container and LCL options across all major ocean trade routes worldwide." },
+  { icon: <Plane size={32} color="#f75d34" />, title: "Air Freight", desc: "Fast, reliable air freight for time-sensitive shipments with real-time tracking." },
+  { icon: <Truck size={32} color="#f75d34" />, title: "Ground Logistics", desc: "Domestic and cross-border land transport with comprehensive tracking coverage." },
+  { icon: <Warehouse size={32} color="#f75d34" />, title: "Warehousing", desc: "Climate-controlled storage with advanced inventory management and fulfillment." },
+  { icon: <ClipboardCheck size={32} color="#f75d34" />, title: "Customs Clearance", desc: "Expert brokerage ensuring smooth regulatory compliance at all international borders." },
+  { icon: <Zap size={32} color="#f75d34" />, title: "Express Delivery", desc: "Same-day and next-day express delivery with guaranteed delivery windows." },
+];
+
 export default function AboutPage() {
   return (
     <div className={styles.container}>
@@ -58,28 +69,48 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Our Services on About Page */}
+      <section className={styles.aboutServicesSection}>
+        <div className={styles.sectionBadge}>WHAT WE OFFER</div>
+        <h2 className={styles.aboutServicesTitle}>Our Core <span>Services</span></h2>
+        <p className={styles.aboutServicesSub}>From ocean freight to last-mile delivery — comprehensive logistics tailored to every need.</p>
+        <div className={styles.aboutServicesGrid}>
+          {aboutServices.map((s, i) => (
+            <Link key={i} href={`/services#${s.title.toLowerCase().replace(/\s+/g, "-")}`} className={styles.aboutSvcCard}>
+              <div className={styles.aboutSvcIcon}>{s.icon}</div>
+              <h3>{s.title}</h3>
+              <p>{s.desc}</p>
+              <span className={styles.aboutSvcLearn}>Learn More →</span>
+            </Link>
+          ))}
+        </div>
+        <div style={{ textAlign: "center", marginTop: "3rem" }}>
+          <Link href="/services" className={styles.aboutSvcViewAll}>View All Services →</Link>
+        </div>
+      </section>
+
       {/* Values */}
       <section className={styles.valuesSection}>
         <div className={styles.sectionBadge}>OUR CORE VALUES</div>
         <h2 className={styles.valuesTitle}>What Drives <span>Everything We Do</span></h2>
         <div className={styles.valuesGrid}>
           <div className={styles.valueCard}>
-            <div className={styles.valueIcon}>⚡</div>
+            <div className={styles.valueIcon}><FastForward size={48} color="#f75d34" /></div>
             <h3>Speed</h3>
             <p>We execute every delivery with a sense of urgency, because your time matters.</p>
           </div>
           <div className={styles.valueCard}>
-            <div className={styles.valueIcon}>🔒</div>
+            <div className={styles.valueIcon}><ShieldCheck size={48} color="#f75d34" /></div>
             <h3>Security</h3>
             <p>Every shipment is tracked and insured end-to-end for your complete peace of mind.</p>
           </div>
           <div className={styles.valueCard}>
-            <div className={styles.valueIcon}>🌍</div>
+            <div className={styles.valueIcon}><Globe2 size={48} color="#f75d34" /></div>
             <h3>Global Reach</h3>
             <p>Our network spans 80+ countries, ensuring no destination is too far.</p>
           </div>
           <div className={styles.valueCard}>
-            <div className={styles.valueIcon}>🤝</div>
+            <div className={styles.valueIcon}><Handshake size={48} color="#f75d34" /></div>
             <h3>Integrity</h3>
             <p>We are transparent in our pricing and honest in every customer interaction.</p>
           </div>

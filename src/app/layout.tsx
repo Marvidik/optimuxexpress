@@ -29,6 +29,8 @@ export const metadata: Metadata = {
   },
 };
 
+import Script from "next/script";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -37,8 +39,17 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${barlowCondensed.variable}`}>
       <body>
+        <div id="google_translate_element" style={{ display: "none" }}></div>
         {children}
         <ChatScript />
+        <Script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" strategy="lazyOnload" />
+        <Script id="google-translate-init" strategy="lazyOnload">
+          {`
+            function googleTranslateElementInit() {
+              new window.google.translate.TranslateElement({pageLanguage: 'en', layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+            }
+          `}
+        </Script>
       </body>
     </html>
   );
